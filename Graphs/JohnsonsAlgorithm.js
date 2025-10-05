@@ -50,11 +50,10 @@ function dijkstra(graph, source) {
   return dist
 }
 
-
 export function johnsonsAlgorithm(graph) {
   const n = graph.length
 
-  const newGraph = graph.map(edges => [...edges])
+  const newGraph = graph.map((edges) => [...edges])
   newGraph.push([])
   for (let v = 0; v < n; v++) {
     newGraph[newGraph.length - 1].push([v, 0])
