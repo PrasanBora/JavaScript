@@ -7,7 +7,7 @@
 
 function gcd(a, b) {
   while (b !== 0) {
-    [a, b] = [b, a % b]
+    ;[a, b] = [b, a % b]
   }
   return a
 }
@@ -19,7 +19,10 @@ function gcd(a, b) {
  */
 export function pollardsRho(n) {
   if (n % 2 === 0) return 2
-  let x = 2, y = 2, d = 1, f = v => (v * v + 1) % n
+  let x = 2,
+    y = 2,
+    d = 1,
+    f = (v) => (v * v + 1) % n
   while (d === 1) {
     x = f(x)
     y = f(f(y))
